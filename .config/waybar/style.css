@@ -83,7 +83,7 @@ button:hover {
 #mode {
     /* background-color: #64727D; */
     /* border-bottom: 3px solid #ffffff; */
-    background-color: @peach;
+    /* background-color: @sapphire; */
     /* border-bottom: 3px solid @peach; */
     color: @base;
 }
