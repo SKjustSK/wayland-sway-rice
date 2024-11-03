@@ -224,14 +224,42 @@ bar {
     bindsym XF86AudioLowerVolume exec pactl set-sink-volume @DEFAULT_SINK@ -5%
 
     # Gaps
-    default_border pixel 2
-    gaps inner 6
+    default_border pixel 3
+    gaps inner 12
     gaps outer 6
     smart_gaps on
+    smart_borders on
 
     # Network manager / System tray
     exec_always nm-applet &
 
+    # Opacity (HOP -> High Opacity, LOP -> Low Opacity)
+    set $HOP 0.95
+    set $LOP 0.9
+    # for_window [class=".*"] opacity $opacity
+    # for_window [app_id=".*"] opacity $opacity
+    for_window [app_id="org.mozilla.firefox"] opacity $HOP
+    for_window [class="Code"] opacity $HOP
+    for_window [app_id="Alacritty"] opacity $LOP
+    for_window [app_id="thunar"] opacity $LOP
+
     # SwayFX
+    corner_radius 15
+    blur enable
+    blur_xray disable
+    blur_brightness 1.2
+
+    default_dim_inactive 0.05
+    layer_effects "gtk-layer-shell" blur enable
+
+    # Colors
+    include ./catppuccin-mocha
+    # target                 title     bg    text   indicator  border
+    client.focused           $lavender $base $text  $rosewater $sky
+    client.focused_inactive  $overlay0 $base $text  $rosewater $overlay0
+    client.unfocused         $overlay0 $base $text  $rosewater $overlay0
+    client.urgent            $peach    $base $peach $overlay0  $peach
+    client.placeholder       $overlay0 $base $text  $overlay0  $overlay0
+    client.background        $base
 
 include /etc/sway/config.d/*

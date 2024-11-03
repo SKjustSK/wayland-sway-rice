@@ -1,3 +1,5 @@
+@import "mocha.css";
+
 * {
     /* `otf-font-awesome` is required to be installed for icons */
     font-family: "JetBrainsMono Nerd Font", FontAwesome, Roboto, Helvetica, Arial, sans-serif;
@@ -5,9 +7,12 @@
 }
 
 window#waybar {
-    background-color: rgba(43, 48, 59, 0.5);
+    /* background-color: rgba(43, 48, 59, 0.5);
     border-bottom: 2px solid rgba(100, 114, 125, 0.5);
-    color: #ffffff;
+    color: #ffffff; */
+    background-color: alpha(@base, 0.8);
+    border-bottom: 2px solid alpha(@mantle, 0.8);
+    color: @text; 
     transition-property: background-color;
     transition-duration: .5s;
 }
@@ -51,25 +56,33 @@ button:hover {
 #workspaces button {
     padding: 0 5px;
     background-color: transparent;
-    color: #ffffff;
+    color: @text;
 }
 
 #workspaces button:hover {
-    background: rgba(0, 0, 0, 0.2);
+    /* background: rgba(0, 0, 0, 0.2); */
+    background: @pink;
+    color: @base;
 }
 
 #workspaces button.focused {
-    background-color: #64727D;
-    box-shadow: inset 0 -3px #ffffff;
+    /* background-color: #64727D; */
+    /* box-shadow: inset 0 -3px #ffffff; */
+    background-color: alpha(@red, 1.0);
+    box-shadow: inset 0 -3px @red;
+    color: @base;
 }
 
 #workspaces button.urgent {
-    background-color: #eb4d4b;
+    background-color: @peach;
 }
 
 #mode {
-    background-color: #64727D;
-    border-bottom: 3px solid #ffffff;
+    /* background-color: #64727D; */
+    /* border-bottom: 3px solid #ffffff; */
+    background-color: @peach;
+    /* border-bottom: 3px solid @peach; */
+    color: @base;
 }
 
 #clock,
@@ -95,6 +108,7 @@ button:hover {
 #window,
 #workspaces {
     margin: 0 4px;
+    color: @peach;
 }
 
 /* If workspaces is the leftmost module, omit left margin */
@@ -107,27 +121,34 @@ button:hover {
     margin-right: 0;
 }
 
-#clock {
+#clock.time {
     /* background-color: #64727D; */
 	/* border: 1px solid black; */
+    color: @red;
+}
+
+#clock.date {
+    color: @flamingo;
 }
 
 #battery {
     /* background-color: #ffffff; */
-    /* color: #000000; */
 	/* border: 1px solid black; */
+    color: @green;
 }
 
 #battery.charging, #battery.plugged {
-    /* color: #ffffff; */
+    color: @green;
     /* background-color: #26A65B; */
 	/* border: 1px solid black; */
 }
 
 @keyframes blink {
+    from {
+        color: @text;
+    }
     to {
-        background-color: #ffffff;
-        color: #000000;
+        color: @red;
     }
 }
 
@@ -145,43 +166,51 @@ label:focus {
     background-color: #000000;
 }
 
-#cpu {
+/* #cpu {
     background-color: #2ecc71;
     color: #000000;
-}
+} */
 
-#memory {
+/* #memory {
     background-color: #9b59b6;
 }
 
 #disk {
     background-color: #964B00;
-}
+} */
 
 #backlight {
     /* background-color: #90b1b1; */
     /* border: 1px solid black; */
+    color: @peach;
 }
 
-#network {
+#network.wireless {
     /* background-color: #2980b9; */
 	/* border: 1px solid black; */
+    color: @teal;
 }
 
-#network.disconnected {
+#network.wired {
+    color: @blue;
+}
+
+#network.wireless.disconnected,
+#network.wired.disconneted {
     /* background-color: #f53c3c; */
 }
 
 #pulseaudio {
-    /* background-color: #f1c40f;
-    color: #000000; */
+    /* background-color: #f1c40f; */
 	/* border: 1px solid black; */
+    color: @yellow;
 }
 
 #pulseaudio.muted {
     /* background-color: #90b1b1; */
     /* color: #2a5c45; */
 	/* border: 1px solid black; */
+    color: @subtext0;
 }
 
 #wireplumber {
@@ -194,26 +223,28 @@ label:focus {
 }
 
 #custom-media {
-    background-color: #66cc99;
-    color: #2a5c45;
+    /* background-color: #66cc99; */
     min-width: 100px;
+    color: @sky;
 }
 
 #custom-media.custom-spotify {
-    background-color: #66cc99;
+    /* background-color: #66cc99; */
+    color: @green;
 }
 
 #custom-media.custom-vlc {
-    background-color: #ffa000;
+    /* background-color: #ffa000; */
+    color: @peach;
 }
 
-#temperature {
+/* #temperature {
     background-color: #f0932b;
-}
+} */
 
-#temperature.critical {
+/* #temperature.critical {
     background-color: #eb4d4b;
-}
+} */
 
 #tray {
     /* background-color: #2980b9; */
@@ -225,7 +256,7 @@ label:focus {
 
 #tray > .needs-attention {
     -gtk-icon-effect: highlight;
-    background-color: #eb4d4b;
+    background-color: @peach;
 }
 
 #idle_inhibitor {
@@ -279,9 +310,11 @@ label:focus {
 }
 
 #scratchpad {
-    background: rgba(0, 0, 0, 0.2);
+    /* background: rgba(0, 0, 0, 0.2); */
+    color: @text;
 }
 
 #scratchpad.empty {
+    color: @text;
 	background-color: transparent;
 }

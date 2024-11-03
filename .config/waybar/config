@@ -5,9 +5,9 @@
     // "width": 1280, // Waybar width
     "spacing": 4, // Gaps between modules (4px)
     // Choose the order of the modules
-    "modules-left": ["sway/workspaces", "sway/mode", "sway/scratchpad", "sway/window" ,"custom/media"],
+    "modules-left": ["sway/workspaces", "sway/mode", "sway/scratchpad", "sway/window"],
     "modules-center": [],
-    "modules-right": ["tray", "network#wired", "network#wireless", "pulseaudio", "backlight", "battery", "clock"],
+    "modules-right": ["tray", "custom-media", "network#wired", "network#wireless", "pulseaudio", "backlight", "battery", "clock#date", "clock#time"],
     // Modules configuration
     // "sway/workspaces": {
     //     "disable-scroll": true,
@@ -72,14 +72,22 @@
         // "icon-size": 21,
         "spacing": 10
     },
-    "clock": {
-        "format": "  {:%a %d %b %Y    %I:%M %p}",
+    "clock#date": {
+        "format": "  {:%a %d %b %Y}",
         "tooltip-format": "<tt><small>{calendar}</small></tt>",
         "calendar": {
             "mode"          : "month",
             "mode-mon-col"  : 3,
             "on-scroll"     : 1
         }
+    },
+    "clock#time": {
+        "format": "  {:%I:%M %p}",
+        "tooltip-format": "UTC: {tz_list}",
+        "timezones": [
+            "Asia/Calcutta",
+            "Etc/UTC"
+        ]
     },
     "backlight": {
         "format": "{icon}  {percent}%",
