@@ -242,6 +242,7 @@ bar {
     for_window [class="Code"] opacity $HOP
     for_window [app_id="Alacritty"] opacity $LOP
     for_window [app_id="thunar"] opacity $LOP
+    for_window [class="Spotify"] opacity $LOP
 
     # SwayFX
     corner_radius 15
