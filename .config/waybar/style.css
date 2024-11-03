@@ -10,8 +10,8 @@ window#waybar {
     /* background-color: rgba(43, 48, 59, 0.5);
     border-bottom: 2px solid rgba(100, 114, 125, 0.5);
     color: #ffffff; */
-    background-color: alpha(@base, 0.8);
-    border-bottom: 2px solid alpha(@mantle, 0.8);
+    background-color: alpha(@base, 0.9);
+    border-bottom: 2px solid alpha(@mantle, 0.9);
     color: @text; 
     transition-property: background-color;
     transition-duration: .5s;

@@ -30,7 +30,7 @@ include /etc/sway/config-vars.d/*
 #
 # Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
 # output * bg /usr/share/backgrounds/sway/Sway_Wallpaper_Blue_1920x1080.png fill
-output * bg $HOME/Pictures/Wallpapers/sakura_dark.png fill
+output * bg $HOME/Pictures/Wallpapers/night_city.png fill
 
 #
 # Example configuration:
@@ -241,11 +241,11 @@ bar {
     for_window [app_id="org.mozilla.firefox"] opacity $HOP
     for_window [class="Code"] opacity $HOP
     for_window [app_id="Alacritty"] opacity $LOP
-    for_window [app_id="thunar"] opacity $LOP
+    for_window [app_id="thunar"] opacity $HOP
     for_window [class="Spotify"] opacity $LOP
 
     # SwayFX
-    corner_radius 15
+    corner_radius 5
     blur enable
     blur_xray disable
     blur_brightness 1.2
@@ -256,7 +256,7 @@ bar {
     # Colors
     include ./catppuccin-mocha
     # target                 title     bg    text   indicator  border
-    client.focused           $lavender $base $text  $rosewater $sky
+    client.focused           $sky      $base $text  $rosewater $sky
     client.focused_inactive  $overlay0 $base $text  $rosewater $overlay0
     client.unfocused         $overlay0 $base $text  $rosewater $overlay0
     client.urgent            $peach    $base $peach $overlay0  $peach
