@@ -255,7 +255,7 @@ bar {
     # Opacity (HOP -> High Opacity, LOP -> Low Opacity)
     set $HOP 0.95
     set $LOP 0.9
-    for_window [app_id="org.mozilla.firefox"] opacity $HOP
+    # for_window [app_id="org.mozilla.firefox"] opacity $HOP
     for_window [class="Code"] opacity $HOP
     for_window [app_id="Alacritty"] opacity $LOP
     for_window [app_id="thunar"] opacity $HOP

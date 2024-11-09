@@ -110,8 +110,9 @@
    	    "format-icons": ["󰤯", "󰤟", "󰤢", "󰤥", "󰤨"] 
     },
     "network#wired": {
-        "interface": "enx7cc2c647d5e9",
-        "format": "󰈁 {ifname}",
+        // "interface": "enx7cc2c647d5e9",
+        "format": "",
+        "format-ethernet": "󰈁 {ifname}",
         "format-disconnected": "󰈂  disconnected"
     },
     "pulseaudio": {
