@@ -105,7 +105,7 @@ button:hover {
 #scratchpad,
 #mpd {
     padding: 0 10px;
-    background-color: alpha(@mantle, 1);
+    background-color: alpha(@surface0, 1);
     color: @text;
 }
 
@@ -230,6 +230,6 @@ label:focus {
     color: @mantle;
 }
 #window {
-    background-color: @mauve;
-    color: @mantle;
+    background-color: @surface0;
+    color: @text;
 }
