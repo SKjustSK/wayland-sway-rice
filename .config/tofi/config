@@ -1,0 +1,15 @@
+text-color = #27822
+prompt-color = #a6e22e
+selection-color = #a6e22e
+background-color = #27822
+border-color = #a6e22e
+
+border-width = 2
+outline-width = 0
+padding-left = 4%
+padding-top = 2%
+padding-right = 0
+padding-bottom = 0
+
+font = "JetBrainsMono Nerd Font"
+font-size = 16
