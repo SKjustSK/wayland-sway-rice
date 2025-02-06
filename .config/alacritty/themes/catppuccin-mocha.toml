@@ -9,7 +9,7 @@ text = "#1e1e2e"
 cursor = "#f5e0dc"
 
 [colors.vi_mode_cursor]
-text = "#1e1e2e"
+text = "#1e1e2e"3
 cursor = "#b4befe"
 
 [colors.search.matches]

@@ -1,0 +1,14 @@
+set $black #272822
+set $bright_black #75715e
+set $blue #66d9ef
+set $cyan #a1efe4
+set $green #a6e22e
+set $magenta #ae81ff
+set $red #f92672
+set $white #f8f8f2
+set $bright_white #f9f8f5
+set $yellow #f4bf75
+set $cursor #f8f8f2
+set $text #272822
+set $background #272822
+set $foreground #f8f8f2

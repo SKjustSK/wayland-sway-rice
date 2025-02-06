@@ -1,83 +1,124 @@
-@import "mocha.css";
+@import "monokai.css";
 
 * {
-	background-image: none;
-	box-shadow: none;
+  background-image: none;
+  box-shadow: none;
 }
 
 window {
-	/* background-color: rgba(12, 12, 12, 0.9); */
-	background-color: alpha(@base, 0.93);
+  /* background-color: rgba(12, 12, 12, 0.9); */
+  background-color: alpha(@mono-base, 0.8);
 }
 
 button {
-	border-radius: 5px;
-	border-color: @text;
-	border-style: solid;
-	border-width: 3px;
+  border-radius: 5px;
+  border-color: white;
+  border-style: solid;
+  border-width: 3px;
 
-	text-decoration-color: @text;
-	color: @text;
+  text-decoration-color: white;
+  color: white;
 
-	/* background-color: #1E1E1E; */
-	background-color: transparent;
-	background-repeat: no-repeat;
-	background-position: center;
-	background-size: 25%;
+  /* background-color: #1E1E1E; */
+  background-color: transparent;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 25%;
 
-	margin: 10px;
-	padding: 20px;
+  margin: 10px;
+  padding: 20px;
 
-	transition: none;
+  transition: none;
 }
 
-button:focus, button:active, button:hover {
-	background-color: @red;
-	outline-style: none;
-	border-color: @red;
-	color: @base;
+button:focus,
+button:active,
+button:hover {
+  background-color: @mono-cyan;
+  outline-style: none;
+  border-color: @mono-cyan;
+  color: @mono-base;
 
-	transition: none;
+  transition: none;
 }
 
 #lock {
-	background-image: image(url("./icons/lock.png"), url("./icons/lock.png"));
+  background-image: image(url("./icons/lock.png"), url("./icons/lock.png"));
 }
-#lock:focus, #lock:active, #lock:hover {
-	background-image: image(url("./icons/lock_selected.png"), url("./icons/lock_selected.png"));
+#lock:focus,
+#lock:active,
+#lock:hover {
+  background-image: image(
+    url("./icons/lock_selected.png"),
+    url("./icons/lock_selected.png")
+  );
 }
 
 #logout {
-	background-image: image(url("./icons/logout.png"), url("./icons/logout.png"));
+  background-image: image(url("./icons/logout.png"), url("./icons/logout.png"));
 }
-#logout:focus, #logout:active, #logout:hover {
-	background-image: image(url("./icons/logout_selected.png"), url("./icons/logout_selected.png"));
+#logout:focus,
+#logout:active,
+#logout:hover {
+  background-image: image(
+    url("./icons/logout_selected.png"),
+    url("./icons/logout_selected.png")
+  );
 }
 
 #suspend {
-	background-image: image(url("./icons/suspend.png"), url("./icons/suspend.png"));
+  background-image: image(
+    url("./icons/suspend.png"),
+    url("./icons/suspend.png")
+  );
 }
-#suspend:focus, #suspend:active, #suspend:hover {
-	background-image: image(url("./icons/suspend_selected.png"), url("./icons/suspend_selected.png"));
+#suspend:focus,
+#suspend:active,
+#suspend:hover {
+  background-image: image(
+    url("./icons/suspend_selected.png"),
+    url("./icons/suspend_selected.png")
+  );
 }
 
 #hibernate {
-	background-image: image(url("./icons/hibernate.png"), url("./icons/hibernate.png"));
+  background-image: image(
+    url("./icons/hibernate.png"),
+    url("./icons/hibernate.png")
+  );
 }
-#hibernate:focus, #hibernate:active, #hibernate:hover {
-	background-image: image(url("./icons/hibernate_selected.png"), url("./icons/hibernate_selected.png"));
+#hibernate:focus,
+#hibernate:active,
+#hibernate:hover {
+  background-image: image(
+    url("./icons/hibernate_selected.png"),
+    url("./icons/hibernate_selected.png")
+  );
 }
 
 #shutdown {
-	background-image: image(url("./icons/shutdown.png"), url("./icons/shutdown.png"));
+  background-image: image(
+    url("./icons/shutdown.png"),
+    url("./icons/shutdown.png")
+  );
 }
-#shutdown:focus, #shutdown:active, #shutdown:hover {
-	background-image: image(url("./icons/shutdown_selected.png"), url("./icons/shutdown_selected.png"));
+#shutdown:focus,
+#shutdown:active,
+#shutdown:hover {
+  background-image: image(
+    url("./icons/shutdown_selected.png"),
+    url("./icons/shutdown_selected.png")
+  );
 }
 
 #reboot {
-	background-image: image(url("./icons/reboot.png"), url("./icons/reboot.png"));
+  background-image: image(url("./icons/reboot.png"), url("./icons/reboot.png"));
 }
-#reboot:focus, #reboot:active, #reboot:hover {
-	background-image: image(url("./icons/reboot_selected.png"), url("./icons/reboot_selected.png"));
+#reboot:focus,
+#reboot:active,
+#reboot:hover {
+  background-image: image(
+    url("./icons/reboot_selected.png"),
+    url("./icons/reboot_selected.png")
+  );
 }
