@@ -18,3 +18,8 @@
 - **Power menu**: wlogout
 - **Firefox**: Monokai Theme extension
 - **VS Code**: Monokai Classic
+
+## To add in future
+- Dunst
+- Spicetify
+- More firefox customizations
