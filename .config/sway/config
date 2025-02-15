@@ -87,6 +87,48 @@ output * bg $HOME/Pictures/Wallpapers/monokai_flowers.png fill
     # mouse button for dragging.
     floating_modifier $mod normal
 
+    # Lock out of sway
+    set $lock_bg 32302F
+    set $lock_error EF5D60
+    set $lock_correct 35BB4B
+    set $lock_text F6EBC1
+    bindsym $mod+Shift+l exec 'swaylock \
+    --image \"$HOME/Pictures/Wallpapers/japanese_aesthetic.png\" \
+    --ignore-empty-password \
+    --fade-in 0.15 \
+    --indicator-caps-lock \
+    --indicator \
+    --clock --timestr "%H:%M" --datestr "%a %d %b" \
+    --font "JetBrainsMonoNerd Font" \
+    --indicator-radius 110px \
+    --indicator-thickness 15px \
+    --bs-hl-color $lock_error \
+    --caps-lock-bs-hl-color $lock_error \
+    --indicator-x-position 500px \
+    --inside-color $lock_bg \
+    --inside-clear-color $lock_bg \
+    --inside-caps-lock-color $lock_bg \
+    --inside-ver-color $lock_correct \
+    --inside-wrong-color $lock_error \
+    --key-hl-color $lock_correct \
+    --layout-bg-color $lock_bg \
+    --layout-border-color $lock_bg \
+    --layout-text-color $lock_text \
+    --line-uses-inside \
+    --line-uses-ring \
+    --ring-color $lock_bg \
+    --ring-clear-color $lock_bg \
+    --ring-caps-lock-color $lock_bg \
+    --ring-ver-color $lock_correct \
+    --ring-wrong-color $lock_error \
+    --separator-color $lock_bg \
+    --text-color $lock_text \
+    --text-clear-color $lock_text \
+    --text-caps-lock-color $lock_text \
+    --text-ver-color $lock_bg \
+    --text-wrong color $lock_bg \
+    '
+
     # Reload the configuration file
     bindsym $mod+Shift+r reload
 
@@ -107,10 +149,10 @@ output * bg $HOME/Pictures/Wallpapers/monokai_flowers.png fill
     bindsym $mod+Right focus right
 
     # Move the focused window with the same, but add Shift
-    bindsym $mod+Shift+$left move left
-    bindsym $mod+Shift+$down move down
-    bindsym $mod+Shift+$up move up
-    bindsym $mod+Shift+$right move right
+    # bindsym $mod+Shift+$left move left
+    # bindsym $mod+Shift+$down move down
+    # bindsym $mod+Shift+$up move up
+    # bindsym $mod+Shift+$right move right
     # Ditto, with arrow keys
     bindsym $mod+Shift+Left move left
     bindsym $mod+Shift+Down move down

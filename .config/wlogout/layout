@@ -1,36 +1,36 @@
 {
-    "label" : "lock",
-    "action" : "swaylock",
-    "text" : "Lock",
-    "keybind" : "l"
-}
+    "label": "lock",
+    "action": "swaylock --image \"$HOME/Pictures/Wallpapers/japanese_aesthetic.png\" --ignore-empty-password --fade-in 0.15 --indicator-caps-lock --indicator --clock --timestr %H:%M --datestr '%a %d %b' --font 'JetBrainsMonoNerd Font' --indicator-radius 110px --indicator-thickness 15px --bs-hl-color EF5D60 --caps-lock-bs-hl-color EF5D60 --indicator-x-position 500px --inside-color 32302F --inside-clear-color 32302F --inside-caps-lock-color 32302F --inside-ver-color 35BB4B --inside-wrong-color EF5D60 --key-hl-color 35BB4B --layout-bg-color 32302F --layout-border-color 32302F --layout-text-color F6EBC1 --line-uses-inside --line-uses-ring --ring-color 32302F --ring-clear-color 32302F --ring-caps-lock-color 32302F --ring-ver-color 35BB4B --ring-wrong-color EF5D60 --separator-color 32302F --text-color F6EBC1 --text-clear-color F6EBC1 --text-caps-lock-color F6EBC1 --text-ver-color 32302F --text-wrong-color 32302F",
+    "text": "Lock",
+    "keybind": "l"
+},
 {
-    "label" : "hibernate",
-    "action" : "systemctl hibernate",
-    "text" : "Hibernate",
-    "keybind" : "h"
-}
+    "label": "hibernate",
+    "action": "systemctl hibernate",
+    "text": "Hibernate",
+    "keybind": "h"
+},
 {
-    "label" : "logout",
-    "action" : "loginctl terminate-user $USER",
-    "text" : "Logout",
-    "keybind" : "e"
-}
+    "label": "logout",
+    "action": "swaymsg exit",
+    "text": "Logout",
+    "keybind": "-"
+},
 {
-    "label" : "shutdown",
-    "action" : "systemctl poweroff",
-    "text" : "Shutdown",
-    "keybind" : "s"
-}
+    "label": "shutdown",
+    "action": "systemctl poweroff",
+    "text": "Shutdown",
+    "keybind": "s"
+},
 {
-    "label" : "suspend",
-    "action" : "systemctl suspend",
-    "text" : "Suspend",
-    "keybind" : "u"
-}
+    "label": "suspend",
+    "action": "systemctl suspend",
+    "text": "Suspend",
+    "keybind": "u"
+},
 {
-    "label" : "reboot",
-    "action" : "systemctl reboot",
-    "text" : "Reboot", 
-    "keybind" : "r"
+    "label": "reboot",
+    "action": "systemctl reboot",
+    "text": "Reboot",
+    "keybind": "r"
 }
