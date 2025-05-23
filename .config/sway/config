@@ -30,7 +30,7 @@ include /etc/sway/config-vars.d/*
 #
 # Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
 # output * bg /usr/share/backgrounds/sway/Sway_Wallpaper_Blue_1920x1080.png fill
-output * bg $HOME/Pictures/Wallpapers/monokai_flowers.png fill
+output * bg $HOME/Pictures/Wallpapers/retro_japan.png fill 
 
 #
 # Example configuration:
@@ -95,7 +95,6 @@ output * bg $HOME/Pictures/Wallpapers/monokai_flowers.png fill
     bindsym $mod+Shift+l exec 'swaylock \
     --image \"$HOME/Pictures/Wallpapers/japanese_aesthetic.png\" \
     --ignore-empty-password \
-    --fade-in 0.15 \
     --indicator-caps-lock \
     --indicator \
     --clock --timestr "%H:%M" --datestr "%a %d %b" \
@@ -126,8 +125,8 @@ output * bg $HOME/Pictures/Wallpapers/monokai_flowers.png fill
     --text-clear-color $lock_text \
     --text-caps-lock-color $lock_text \
     --text-ver-color $lock_bg \
-    --text-wrong color $lock_bg \
-    '
+    --text-wrong-color $lock_bg \
+    '   
 
     # Reload the configuration file
     bindsym $mod+Shift+r reload
@@ -253,6 +252,20 @@ bindsym $mod+r mode "resize"
 # Read `man 5 sway-bar` for more information about this section.
 bar {
 	swaybar_command waybar
+}
+
+
+## INPUT DEVICES ##
+# input 1133:50498:Logitech_Wireless_Receiver_Mouse {
+#
+# }
+input type:pointer {
+	accel_profile flat
+	pointer_accel 0.3
+}
+
+input type:touchpad {
+	
 }
 
 ## CUSTOMIZATION ##

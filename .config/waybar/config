@@ -11,6 +11,8 @@
   ],
   "modules-right": [
     "custom/separator",
+    "custom/cpu_temp",
+    "custom/separator",
     "cpu",
     "custom/separator",
     "network",
@@ -125,6 +127,10 @@
   },
   "sway/mode": {
     "format": "<span style=\"italic\">{}</span>"
+  },
+  "custom/cpu_temp": {
+    "exec": "~/.config/waybar/scripts/cpu_temp.sh",
+    "interval": 5
   },
   "custom/separator": {
     "format": "|",
